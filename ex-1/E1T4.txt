@@ -1,0 +1,10 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The web service is hosted by the unsafe load balancer because of using HTTP. It's supposed to be hosted by HTTPS protocol for more safe. 
+
+# Poor practice 2
+Data is not safe because it's not encrypted. Therefore we should config S3 buckets with encryption using KMS keys.
+
+# Poor practice 3
+Web service should not be public. It should be in the private subnet.
