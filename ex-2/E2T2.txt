@@ -1,0 +1,15 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Vulnerabilities:
+1. Amazon EC2 instance metadata version is IMDSv1
+2. Amazon EC2 instance have a public IP association. 
+3. EBS volumes are not encrypted.
+4. Load Balancer is using HTTP.
+5. S3 buckets is not secured.
+
+Solution:
+1. EC2 instance should be in IMDSv2
+2. EC2 instance should not be associated with a public IP.
+3. EBS volumes should be encrypted with KMS key.
+4. Load Balancer should be in HTTPS protocol.
+5. S3 buckets should be encrypted by KMS key.
