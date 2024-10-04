@@ -10,7 +10,14 @@ Parameters:
   KeyPair:
     Type: String
     Description: "Name of an existing KeyPair you will use to access the EC2 instances in this exercise. Be sure you have access to the private key file corresponding to this keypair."
-
+  BucketNameRecipesFree:
+    Description: BucketNameRecipesFree from vpc outputs
+    Type: String
+    # Default: arn:aws:s3:::cand-c3-free-recipes-081322589116
+  BucketNameRecipesSecret:
+    # Default: arn:aws:s3:::cand-c3-secret-recipes-081322589116
+    Type: String
+    Description: BucketNameRecipesSecret from vpc outputs
 
 Resources:
   InstanceRole:
@@ -90,8 +97,8 @@ Resources:
               systemctl daemon-reload
               sleep 30
               service flask restart
-            - S3FreeRecipies: !ImportValue BucketNameRecipesFree
-              S3SecretRecipies: !ImportValue BucketNameRecipesSecret
+            - S3FreeRecipies: !Ref BucketNameRecipesFree
+              S3SecretRecipies: !Ref BucketNameRecipesSecret
 
 # Add code for Exercise 3
 
