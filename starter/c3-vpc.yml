@@ -34,6 +34,10 @@ Parameters:
     Type: String
     Default: 10.192.21.0/24
 
+  BucketArnVPCFlowLogs:
+    Description: Bucket arn of VPC Flow Logs
+    Type: String
+
 Resources:
   VPC:
     Type: AWS::EC2::VPC
