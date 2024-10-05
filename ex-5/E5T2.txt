@@ -1,0 +1,26 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+1. Terrascan
+2. checkov
+
+### Example vulnerability
+1. Terrascan: IAM role with a too opened policy.
+2. S3 bucket turn off "Block public"
+
+##Scan AMI’s or containers for OS vulnerabilities
+1. Clair
+2. Anchore
+
+### Example vulnerability
+1. Clair: "See record for full details"
+2. Anchore: Deserialization of Untrusted Data
+
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+1. AWS config 
+2. Astra Pentest
+
+### Example vulnerability
+1. AWS Config: Amazon Elastic Block Store (EBS) is not encrypted.
+2. Astra Pentest: Secure SSH access
