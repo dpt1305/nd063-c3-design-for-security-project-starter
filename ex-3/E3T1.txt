@@ -1,0 +1,5 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+"Attack Instance - C3" instance is performing SSH brute force attacks against "Web Service Instance - C3" instance
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+GuardDuty analyze the data which is collected from CloudTrails, CloudWatch, VPC Flow Logs,... Moreover, this service use ML model in order to detect threats or malicious activities in AWS environment. 
