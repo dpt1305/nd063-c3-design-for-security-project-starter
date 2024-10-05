@@ -1,0 +1,9 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Narrow the ingress IP list of Web Service's Security Group. Only put accepted IP into the ingress IP list.
+- Use IAM Role for limiting the resources that are accessed and people who can access.
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Use IAM role to avoid the unacceptable access from EC2 instances.
+- Use bucket policy to limit resources that users can access.
+- Encrypt S3 bucket with KMS key which is restricted accessibility by users. 
