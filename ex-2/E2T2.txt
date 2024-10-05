@@ -6,6 +6,7 @@ Vulnerabilities:
 3. EBS volumes are not encrypted.
 4. Load Balancer is using HTTP.
 5. S3 buckets is not secured.
+6. Security Group(for web server) is too opened.
 
 Solution:
 1. EC2 instance should be in IMDSv2
@@ -13,3 +14,4 @@ Solution:
 3. EBS volumes should be encrypted with KMS key.
 4. Load Balancer should be in HTTPS protocol.
 5. S3 buckets should be encrypted by KMS key.
+6. Security Group should be set for the accepted IP, not for all.
