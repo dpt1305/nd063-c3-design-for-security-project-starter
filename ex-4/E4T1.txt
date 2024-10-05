@@ -1,5 +1,3 @@
-
-
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 - Narrow the ingress IP list of Web Service's Security Group. Only put accepted IP into the ingress IP list.
 - Use IAM Role for limiting the resources that are accessed and people who can access.
